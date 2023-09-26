@@ -1,12 +1,12 @@
 /* Dark Verision */
 body {
-  background: #18191b;
+  background: #424143;
 }
 header {
-  background: #18191b;
+  background: #424143;
 }
 footer.dark,footer {
-  background: #0b0b0b;
+  background: #424143;
 }
 h1,
 h2,
@@ -73,7 +73,7 @@ h6 {
 }
 .widget_product_tag_cloud a:hover {
   color: #fff;
-  background: #ff7400;
+  background: #2BABE2;
 }
 .icon-box-inline-sm {
   background: #403d3d;
