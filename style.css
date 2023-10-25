@@ -25,6 +25,14 @@
   transform: scaleX(-1) !important;
 
 }
+
+html {
+  overflow-y:scroll;
+}
+
+.big_svg{
+  width: 4.3em;
+}
 /*********/
 h1,
 h2,
