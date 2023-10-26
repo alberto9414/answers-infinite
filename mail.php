@@ -17,9 +17,9 @@ $mail->SMTPDebug =  SMTP::DEBUG_SERVER;
 
 $mail->isSMTP(); 
 
-$mail->SMTPAuth = true;
 $mail->Host = "answersinfinite.com";
-$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->SMTPAuth = true;
+$mail->SMTPSecure = 'ssl';
 $mail->Port = 465;
 
 $mail->Username = "info@answersinfinite.com";
