@@ -43,66 +43,8 @@
 	<body class="royal_loader">
 		<!-- royal_loader -->
 		<div id="page" >
-			<!-- Mobile Menu -->
-			<nav id="menu">
-				<ul>
-					<li class="active">
-						<a href="index.html">HOME</a>
-					</li>
-					<li>
-						<a href="services.html">SERVICES</a>
-					</li>
-					<li>
-						<a href="portfolio.html">PORTFOLIO</a>
-					</li>
-					<li>
-						<a href="about.html">ABOUT US</a>
-					</li>
-					<li>
-						<a href="contact.html">CONTACT</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- /Mobile Menu -->
-
-			<header id="stick" class="header-home">
-				<h1 class="logo"><a href="index.html" >
-					<img src="images/logo-on-dark.png" class="img-responsive" alt="Image"></a>
-				</h1>
-				<div class="btn-search-header">
-						<span class="lnr lnr-magnifier"></span>
-						<div class="search-popup">
-							<form class="form-search-navi">
-								<div class="input-group">
-									<input class="form-control" placeholder="Search Here" type="text">
-									<button><span class="lnr lnr-magnifier"></span></button>
-								</div>
-								<!-- /input-group -->
-							</form>
-						</div>
-				</div>
-				
-				<nav id="main-nav" class="main-nav">
-					<ul>
-						<li class="active">
-							<a href="index.html">HOME</a>
-						</li>
-						<li>
-							<a href="services.html">SERVICES</a>
-						</li>
-						<li>
-							<a href="portfolio.html">PORTFOLIO</a>
-						</li>
-						<li>
-							<a href="about.html">ABOUT US</a>
-						</li>
-						<li>
-							<a href="contact.html">CONTACT</a>
-						</li>
-					</ul>
-				</nav>
-				<a href="#menu" class="btn-menu-mobile"><span class="lnr lnr-menu"></span></a>
-			</header>
+		
+		<?php require("master/header.php") ?>
 			<!-- /End Header 1 Warp -->
 			<section class="boxed no-padding o-hidden">
 				<!-- START REVOLUTION SLIDER 5.0.7 auto mode -->
@@ -322,14 +264,14 @@
 				</div>
 				<div class="line-top-right w-680">
 					<div class="outter-btn">
-						<a href="portfolio.html" class="ot-btn border-dark">View All</a>
+						<a href="portfolio.php" class="ot-btn border-dark">View All</a>
 					</div>
 				</div>
 				<div class="row">
 					<div id="portfolio-h1" class="owl-portfolio-h1 owl-page-h">
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/young-manual-worker-presenting-new-business-strategy-company-managers-his-colleagues-factory.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -339,13 +281,13 @@
 									<p>				
 										Empowering your team with the knowledge and skills to work alongside AI tools, ensuring seamless integration and productivity gains.
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/mid-shot-woman-talking-phone-table.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -355,13 +297,13 @@
 									<p>	
 										Crafting bespoke AI roadmaps tailored to your business needs, ensuring you have a clear path from conceptualization to implementation.
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/car-mechanic-with-tablet-near-car-work-clothes.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -371,13 +313,13 @@
 									<p>
 										Analyzing your existing processes, pinpointing areas where AI can drive efficiency, boost performance, and deliver a competitive edge.
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/business-team-working-meeting-brainstorming-concept.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -387,13 +329,13 @@
 									<p>
 										Assisting in collecting, managing, and interpreting data. Harness the power of data analytics to gain deeper business insights.
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/happy-corporate-manager-shaking-hands-with-black-worker-after-staff-meeting-factory.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -404,13 +346,13 @@
 										Guiding businesses on responsible AI adoption, ensuring compliance with regional and global standards and building trust with stakeholders.
 
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
 						<div class="portfolio-h1-item">
 							<div class="col-md-6">
-								<a href="portfolio.html">
+								<a href="portfolio.php">
 									<img src="images/assets/multi-exposure-stats-data-illustration-modern-laptop-background-computing-analytics-concept.jpg" class="img-responsive" alt="Image">
 								</a>
 							</div>
@@ -421,7 +363,7 @@
 										Collaborating closely to develop tailor-made AI tools and solutions, from chatbots to advanced machine learning models.
 									</p>
 									</p>
-									<a href="services.html" class="ot-btn btn-style-2">Our services</a>
+									<a href="services.php" class="ot-btn btn-style-2">Our services</a>
 								</div>
 							</div>
 						</div>
@@ -513,17 +455,17 @@
 					</div>
 					<div class="col-md-9 ">
 						<div class="row">
-							<form action="POST" class=" on-dark">
+							<form method="post" action="mail.php" class=" on-dark">
 								<div class="col-md-4 col-sm-6">
-									<input class="contact-input" type="text" required="required" placeholder="Name">
-									<input class="contact-input" type="text" required="required" placeholder="Phone Number">
+									<input class="contact-input" type="text" required="required" placeholder="Name" name="Name">
+									<input class="contact-input" type="text" required="required" placeholder="Phone Number" nanme="phone">
 								</div>
 								<div class="col-md-4 col-sm-6">
-									<input class="contact-input" type="email" required="required" placeholder="E-Mail">
-									<input class="contact-input" type="text" required="required" placeholder="Topic">
+									<input class="contact-input" type="email" required="required" placeholder="E-Mail" name="email">
+									<input class="contact-input" type="text" required="required" placeholder="Topic" email="topic">
 								</div>
 								<div class="col-md-4 col-sm-6">
-									<textarea class="textarea-contact" rows="4" required="required" placeholder="Message"></textarea>
+									<textarea class="textarea-contact" rows="4" required="required" placeholder="Message" name="message"></textarea>
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-md-4 ">
@@ -536,35 +478,7 @@
 			</section>
 			<!-- /contact -->
 
-			<footer class="footer-home-1">
-
-				<div class="footer-inner">
-					<div class="row">
-						<div class="col-md-6">
-							<a href="index.html" class="logo">
-								<img src="images/logo-on-dark.png" class="img-responsive" alt="Image">
-							</a>
-							<ul class="footer-link-2 ">
-								<li><a href="#">Career </a></li>
-								<li><a href="#">Privacy Policy </a></li>
-								<li><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-
-						<div class="col-md-3">
-							<ul class="widget-social-list">
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							 </ul>
-						</div>
-						<div class="col-md-3">
-							<div class="copyright">Copyright © 2023<br> All Right Reserved. Designed by Banana Media Inc</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+			<?php require("master/footer.php")?>
 			<!-- /Footer home 1 -->
 
 

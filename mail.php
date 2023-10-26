@@ -1,21 +1,37 @@
 <?php
 
-// Include Composer autoload file to load Resend SDK classes...
-require __DIR__ . '/autoload.php';
+$name = $_POST["name"];
+$phone = $_POST["phone"];
+$email = $_POST["email"];
+$topic = $_POST["topic"];
+$message = $_POST["message"];
 
-// Assign a new Resend Client instance to $resend variable, which is automatically autoloaded...
-$resend = Resend::client('re_123456789');
+require "vendor/autoload.php";
 
-try {
-    $result = $resend->emails->send([
-        'from' => 'Acme <info@answersinfinite.com>',
-        'to' => ['alberto@bananamediainc.com'],
-        'subject' => 'Hello world',
-        'html' => '<strong>It works!</strong>',
-    ]);
-} catch (\Exception $e) {
-    exit('Error: ' . $e->getMessage());
-}
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
 
-// Show the response of the sent email to be saved in a log...
-echo $result->toJson();
+$mail = new PHPMailer(true);
+
+$mail->SMTPDebug =  SMTP::DEBUG_SERVER;
+
+$mail->isSMTP(); 
+
+$mail->SMTPAuth = true;
+$mail->Host = "answersinfinite.com";
+$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+$mail->Port = 465;
+
+$mail->Username = "info@answersinfinite.com";
+$mail->Password = "answersinfinte";
+
+$mail->setFrom($email,$name);
+$mail->addAddress("info@answersinfinite.com", "Answers Infinite");
+
+$mail->Subject = "It worked!";
+$mail->Body = $message;
+
+$mail->send();
+
+header("Location: thankyou.php");
+?>

@@ -29,65 +29,7 @@
 		<!-- royal_loader -->
 		<div id="page" >
 			<!-- Mobile Menu -->
-			<nav id="menu">
-				<ul>
-					<li>
-						<a href="index.html">HOME</a>
-					</li>
-					<li>
-						<a href="services.html">SERVICES</a>
-					</li>
-					<li>
-						<a href="portfolio.html">PORTFOLIO</a>
-					</li>
-					<li>
-						<a href="about.html">ABOUT US</a>
-					</li>
-					<li class="active">
-						<a href="contact.html">CONTACT</a>
-					</li>
-				</ul>
-			</nav>
-			<!-- /Mobile Menu -->
-
-			<header  id="stick" class="header-home">
-				<h1 class="logo"><a href="index.html" >
-					<img src="images/logo-on-dark.png" class="img-responsive" alt="Image"></a>
-				</h1>
-				<div class="btn-search-header">
-						<span class="lnr lnr-magnifier"></span>
-						<div class="search-popup">
-							<form class="form-search-navi">
-								<div class="input-group">
-									<input class="form-control" placeholder="Search Here" type="text">
-									<button><span class="lnr lnr-magnifier"></span></button>
-								</div>
-								<!-- /input-group -->
-							</form>
-						</div>
-					</div>
-				
-				<nav id="main-nav" class="main-nav">
-					<ul>
-						<li>
-							<a href="index.html">HOME</a>
-						</li>
-						<li>
-							<a href="services.html">SERVICES</a>
-						</li>
-						<li>
-							<a href="portfolio.html">PORTFOLIO</a>
-						</li>
-						<li>
-							<a href="about.html">ABOUT US</a>
-						</li>
-						<li class="active">
-							<a href="contact.html">CONTACT</a>
-						</li>
-					</ul>
-				</nav>
-				<a href="#menu" class="btn-menu-mobile"><span class="lnr lnr-menu"></span></a>
-			</header>
+			<?php require("master/header.php") ?>
 			<!-- /End Header 1 Warp -->
 			
 			<section class="boxed no-padding bg-img " style="background-image: url(images/assets/poly-nodes.png)">
@@ -180,35 +122,7 @@
 			</section>
 			<!-- /contact form -->
 
-			<footer class="footer-home-1 dark">
-
-				<div class="footer-inner">
-					<div class="row">
-						<div class="col-md-6">
-							<a href="index.html" class="logo">
-								<img src="images/logo-on-dark.png" class="img-responsive" alt="Image">
-							</a>
-							<ul class="footer-link-2 ">
-								<li><a href="#">Career </a></li>
-								<li><a href="#">Privacy Policy </a></li>
-								<li><a href="#">Terms &amp; Conditions</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
-
-						<div class="col-md-3">
-							<ul class="widget-social-list">
-								<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-							 </ul>
-						</div>
-						<div class="col-md-3">
-							<div class="copyright">Copyright © 2023<br> All Right Reserved. Designed by Banana Media Inc</div>
-						</div>
-					</div>
-				</div>
-			</footer>
+			<?php require("master/footer.php")?>
 			<!-- /Footer home 1 -->
 
 		</div>
