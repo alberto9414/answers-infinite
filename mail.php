@@ -23,15 +23,21 @@ $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $mail->Port = 465;
 
 $mail->Username = "info@answersinfinite.com";
-$mail->Password = "answersinfinte";
+$mail->Password = "k]%sm]Z&?*2-";
 
-$mail->setFrom($email,$name);
-$mail->addAddress("info@answersinfinite.com", "Answers Infinite");
+$mail->addAddress($email,$name);
+$mail->setFrom("info@answersinfinite.com", "Answers Infinite");
 
 $mail->Subject = "It worked!";
 $mail->Body = $message;
 
-$mail->send();
+try{
+    $mail->send();
+    // header("Location: thankyou.php");
 
-header("Location: thankyou.php");
+ }
+catch(Exception $e){
+    echo "". $e->getMessage();
+}
+
 ?>
