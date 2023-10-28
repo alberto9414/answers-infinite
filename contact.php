@@ -97,17 +97,17 @@
 						<div class="col-md-12">
 							<div class="comments-area">
 							<h2>SEND US A MESSAGE</h2>
-							<form action="POST" class="contact-form">
-								<div class="col-md-4 col-sm-6">
-									<input class="contact-input" required="required" placeholder="Name" type="text">
-									<input class="contact-input" required="required" placeholder="Phone Number" type="text">
+							<form  method="post" action="mail.php" action="POST" class="contact-form">
+							<div class="col-md-4 col-sm-6">
+									<input class="contact-input" type="text" required="required" placeholder="Name" name="Name">
+									<input class="contact-input" type="text" required="required" placeholder="Phone Number" nanme="phone">
 								</div>
 								<div class="col-md-4 col-sm-6">
-									<input class="contact-input" required="required" placeholder="E-Mail" type="email">
-									<input class="contact-input" required="required" placeholder="Topic" type="text">
+									<input class="contact-input" type="email" required="required" placeholder="E-Mail" name="email">
+									<input class="contact-input" type="text" required="required" placeholder="Topic" email="topic">
 								</div>
 								<div class="col-md-4 col-sm-6">
-									<textarea class="textarea-contact" rows="4" required="required" placeholder="Message"></textarea>
+									<textarea class="textarea-contact" rows="4" required="required" placeholder="Message" name="message"></textarea>
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-md-4 ">
