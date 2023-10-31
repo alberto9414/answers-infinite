@@ -43,16 +43,16 @@ function sendEmail($to, $subject, $body)
 
         $mail->isSMTP();
 
-        $mail->Host = "answersinfinite.com";
+        $mail->Host = "smtpout.secureserver.net";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
         $mail->Port = 465;
 
-        $mail->Username = "info@answersinfinite.com";
-        $mail->Password = "k]%sm]Z&?*2-";
+        $mail->Username = "contact@answersinfinite.com";
+        $mail->Password = "answersinfinite";
 
-        $mail->addAddress($$to);
-        $mail->setFrom("info@answersinfinite.com", "Answers Infinite");
+        $mail->addAddress($to);
+        $mail->setFrom("contact@answersinfinite.com", "Answers Infinite");
 
         $mail->isHTML(true); //Set email format to HTML
         $mail->Subject = $subject;
