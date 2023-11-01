@@ -68,8 +68,8 @@ try{
     $to      = 'alberto.alvarado9414@gmail.com';
 $subject = 'the subject';
 $message = 'hello';
-$headers = 'From: info@answersinfinite.com' . "\r\n" .
-    'Reply-To: contact@answersinfinite.com' . "\r\n" .
+$headers = 'From: info@bananamediainc.com' . "\r\n" .
+    'Reply-To: info@bananamediainc.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
  echo (mail($to, $subject, $message, $headers)) ? "Email sent" : "Error";
