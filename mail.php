@@ -40,7 +40,7 @@ function sendEmail($to, $subject, $body)
     try {
         $mail = new PHPMailer(true);
 
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->SMTPDebug  = 2; 
 
         $mail->isSMTP();
 
@@ -59,23 +59,17 @@ function sendEmail($to, $subject, $body)
         $mail->Subject = $subject;
         $mail->Body = $body; //'Thanks for taking the time to connect with us. Expect to hear from us soon.';
 
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
         $mail->send();
     } catch (Exception $e) {
         echo "" . $e->getMessage();
     }
 }
-
-// try{
-//     $to      = 'alberto.alvarado9414@gmail.com';
-// $subject = 'the subject';
-// $message = 'hello';
-// $headers = 'From: alberto@bananamediainc.com' . "\r\n" .
-//     'Reply-To: alberto@bananamediainc.com' . "\r\n" .
-//     'X-Mailer: PHP/' . phpversion();
-
-//  echo (mail($to, $subject, $message, $headers)) ? "Email sent" : "Error";
-// }catch (Exception $e) { 
-//     echo ''. $e->getMessage();  
-// }
 
 ?>
