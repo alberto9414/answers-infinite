@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\SMTP;
 try {
     prepareEmailForUser($email);
     prepareEmailForAdmin($name, $phone, $email, $topic, $message);
-    // header("Location: thankyou.php");
+    header("Location: thankyou.php");
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -44,10 +44,10 @@ function sendEmail($to, $subject, $body)
 
         $mail->isSMTP();
 
-        $mail->Host = "smtp-mail.outlook.com";
+        $mail->Host = "smtpout.secureserver.net";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
-        $mail->Port = 587;
+        $mail->Port = 465;
 
         $mail->Username = "contact@answersinfinite.com";
         $mail->Password = "answersinfinite";
