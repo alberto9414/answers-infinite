@@ -44,10 +44,10 @@ function sendEmail($to, $subject, $body)
 
         $mail->isSMTP();
 
-        $mail->Host = "smtpout.secureserver.net";
+        $mail->Host = "smtp-mail.outlook.com";
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+        $mail->Port = 587;
 
         $mail->Username = "contact@answersinfinite.com";
         $mail->Password = "answersinfinite";
