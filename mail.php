@@ -1,11 +1,11 @@
 <?php
 // use FFI\Exception;
 
-// $name = $_POST["name"];
-// $phone = $_POST["phone"];
-// $email = $_POST["email"];
-// $topic = $_POST["topic"];
-// $message = $_POST["message"];
+$name = $_POST["name"];
+$phone = $_POST["phone"];
+$email = $_POST["email"];
+$topic = $_POST["topic"];
+$message = $_POST["message"];
 
 // require "vendor/autoload.php";
 
@@ -66,16 +66,18 @@
 //     }
 // }
 $to = "alberto@bananamediainc.com, alberto.alvarado9414@gmail.com";
-        $Subject = "You have received a new message from website.";
+        $Subject = "New Email from Answers Infinite.";
 
         $Mensaje = "<html>
                     <head>
-                        <title></title>
+                        <title> New Email from Answers Infinite </title>
                     </head>
                     <body>
-                      <p><strong>Name: </strong></p>
-                      <p><strong>Email Address: </strong> </p>
-                      <p><strong>Message: </strong></p>
+                      <p><strong>Name: $name </strong></p>
+                      <p><strong>Phone: $phone </strong> </p>
+                      <p><strong>Email Address: $email </strong> </p>
+                      <p><strong>Topic: $topic </strong></p>
+                      <p><strong>Message: $message </strong></p>
                     </body>
                     </html>";
 
