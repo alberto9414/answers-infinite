@@ -18,7 +18,7 @@ try {
 function prepareEmailForAdmin($name, $phone, $email, $topic, $message)
 {
     $body = "<h3>You got a new email submission</h3><br><br><p><b>Name: $name </b></p><p><b>Phone:  $phone </b></p><p><b>Email: $email </b></p><p><b>Topic: $topic </b></p><p><b>Message: $message</b></p>";
-    $adminEmail = "alberto@bananamediainc.com" ;
+    $adminEmail = "josh@answersinfinite.com" ;
     sendEmail($adminEmail, "New email from Answers Infinite website", $body);
 }
 
@@ -34,7 +34,7 @@ function sendEmail($to, $subject, $body)
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
 
-        // $headers .= 'Cc: dennis@bananamediainc.com' . "\r\n";
+        $headers .= 'Cc: dennis@bananamediainc.com' . "\r\n";
         $headers .= 'From:Answers Infinite <info@answersinfinite.com>' . "\r\n" ;
 
          mail($to, $subject, $body, $headers);
