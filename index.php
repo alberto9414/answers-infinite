@@ -457,12 +457,12 @@
 						<div class="row">
 							<form method="post" action="mail.php" class=" on-dark">
 								<div class="col-md-4 col-sm-6">
-									<input class="contact-input" type="text" required="required" placeholder="Name" name="Name">
-									<input class="contact-input" type="text" required="required" placeholder="Phone Number" nanme="phone">
+									<input class="contact-input" type="text" required="required" placeholder="Name" name="name">
+									<input class="contact-input" type="text" required="required" placeholder="Phone Number" name="phone">
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<input class="contact-input" type="email" required="required" placeholder="E-Mail" name="email">
-									<input class="contact-input" type="text" required="required" placeholder="Topic" email="topic">
+									<input class="contact-input" type="text" required="required" placeholder="Topic" name="topic">
 								</div>
 								<div class="col-md-4 col-sm-6">
 									<textarea class="textarea-contact" rows="4" required="required" placeholder="Message" name="message"></textarea>
