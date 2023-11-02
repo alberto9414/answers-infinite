@@ -1,5 +1,4 @@
 <?php
-// use FFI\Exception;
 
 $name = $_POST["name"];
 $phone = $_POST["phone"];
@@ -7,15 +6,11 @@ $email = $_POST["email"];
 $topic = $_POST["topic"];
 $message = htmlspecialchars($_POST["message"]);
 
-// require "vendor/autoload.php";
-
-// use PHPMailer\PHPMailer\PHPMailer;
-// use PHPMailer\PHPMailer\SMTP;
 
 try {
     prepareEmailForUser($email);
     prepareEmailForAdmin($name, $phone, $email, $topic, $message);
-    //header("Location: thankyou.php");
+    header("Location: thankyou.php");
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -34,71 +29,21 @@ function prepareEmailForUser($email)
     sendEmail($email, "Thanks for taking the time to connect with us!", $body);
 }
 
-
-// function sendEmail($to, $subject, $body)
-// {
-
-//     try {
-//         $mail = new PHPMailer(true);
-
-//         $mail->SMTPDebug  = 1; 
-
-//         $mail->isSMTP();
-
-//         $mail->Host = "smtpout.secureserver.net";
-//         $mail->SMTPAuth = true;
-//         $mail->SMTPSecure = 'ssl';
-//         $mail->Port = 465;
-
-//         $mail->Username = "contact@answersinfinite.com";
-//         $mail->Password = "answersinfinite";
-
-//         $mail->addAddress($to);
-//         $mail->setFrom("contact@answersinfinite.com", "Answers Infinite");
-
-//         $mail->isHTML(true); //Set email format to HTML
-//         $mail->Subject = $subject;
-//         $mail->Body = $body; //'Thanks for taking the time to connect with us. Expect to hear from us soon.';
-
-       
-//         $mail->send();
-//     } catch (Exception $e) {
-//         echo "" . $e->getMessage();
-//     }
-// }
-
 function sendEmail($to, $subject, $body)
  {
-//$to = "alberto@bananamediainc.com, alberto.alvarado9414@gmail.com";
-  //      $Subject = "New Email from Answers Infinite";
-
-        // $Mensaje = "<html>
-        //             <head>
-        //                 <title> New Email from Answers Infinite </title>
-        //             </head>
-        //             <body>
-        //               <p><strong>Name: $name </strong></p>
-        //               <p><strong>Phone: $phone </strong> </p>
-        //               <p><strong>Email Address: $email </strong> </p>
-        //               <p><strong>Topic: $topic </strong></p>
-        //               <p><strong>Message: $message </strong></p>
-        //             </body>
-        //             </html>";
-
         $headers = "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=iso-8859-1" . "\r\n";
 
         // $headers .= 'Cc: dennis@bananamediainc.com' . "\r\n";
         $headers .= 'From:Answers Infinite <info@answersinfinite.com>' . "\r\n" ;
 
-         //echo  (mail($to, $subject, $body, $headers)) ? "Message sent!" : "Mailer Error" ;
+         mail($to, $subject, $body, $headers);
 
-         $success = mail($to, $subject, $body, $headers);
-         if (!$success) {
-           $errorMessage = error_get_last()['message'];
-           echo $errorMessage;
-        }else{
-          echo "Mail sent!";
-        }
-        //echo  $body;
+        //  $success = mail($to, $subject, $body, $headers);
+        //  if (!$success) {
+        //    $errorMessage = error_get_last()['message'];
+        //    echo $errorMessage;
+        // }else{
+        //   echo "Mail sent!";
+        // }
  }
