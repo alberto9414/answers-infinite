@@ -6,7 +6,6 @@ $email = $_POST["email"];
 $topic = $_POST["topic"];
 $message = htmlspecialchars($_POST["message"]);
 
-
 try {
     prepareEmailForUser($email);
     prepareEmailForAdmin($name, $phone, $email, $topic, $message);
