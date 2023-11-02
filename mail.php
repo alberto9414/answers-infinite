@@ -14,8 +14,8 @@ use PHPMailer\PHPMailer\SMTP;
 
 try {
     prepareEmailForUser($email);
-    prepareEmailForAdmin($name, $phone, $email, $topic, $message);
-    header("Location: thankyou.php");
+    // prepareEmailForAdmin($name, $phone, $email, $topic, $message);
+    //header("Location: thankyou.php");
 } catch (Exception $e) {
     echo $e->getMessage();
 }
@@ -40,17 +40,22 @@ function sendEmail($to, $subject, $body)
     try {
         $mail = new PHPMailer(true);
 
-        $mail->SMTPDebug  = 2; 
+        $mail->SMTPDebug  = 1; 
 
         $mail->isSMTP();
 
-        $mail->Host = "smtpout.secureserver.net";
+       // $mail->Host = "smtp-mail.outlook.com";
+        $mail->Host = "localhost";
         $mail->SMTPAuth = true;
-        $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+        //$mail->SMTPSecure = 'tls';
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port = 587;
 
-        $mail->Username = "contact@answersinfinite.com";
-        $mail->Password = "answersinfinite";
+        // $mail->Username = "contact@answersinfinite.com";
+        // $mail->Password = "answersinfinite";
+
+        $mail->Username = "info@answersinfinite.com";
+        $mail->Password = "?+WU1S;(U3U@";
 
         $mail->addAddress($to);
         $mail->setFrom("contact@answersinfinite.com", "Answers Infinite");
@@ -59,13 +64,7 @@ function sendEmail($to, $subject, $body)
         $mail->Subject = $subject;
         $mail->Body = $body; //'Thanks for taking the time to connect with us. Expect to hear from us soon.';
 
-        $mail->SMTPOptions = array(
-            'ssl' => array(
-                'verify_peer' => false,
-                'verify_peer_name' => false,
-                'allow_self_signed' => true
-            )
-        );
+       
         $mail->send();
     } catch (Exception $e) {
         echo "" . $e->getMessage();
